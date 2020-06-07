@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
         msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg + '\n';
     }
     if (name != "" && user_password != ""){
-        msg = 'Your user name is :- ' + name + ' and password is :- ' + user_password + '\n';
+        msg = msg + '\nYour user name is :- ' + name + ' and password is :- ' + user_password + '\n';
     }
     res.send(msg);
 })
