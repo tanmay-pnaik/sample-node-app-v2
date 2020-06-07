@@ -3,12 +3,13 @@ const app = express()
 const port = 8080
 
 app.get('/', (req, res) => {
-    var msg;
-    if (!app_msg) {
-        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\n';
+    var msg, app_msg;
+    if (app_msg != "") {
+        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nYou have no message for me.';
+    } else {
+        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg;
     }
-    msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg + '\n';
     res.send(msg);
 })
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(port, () => console.log(`Sample node app listening at port ${port}`))
