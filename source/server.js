@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 8080
+var msg;
+var app_msg = process.env.APP_MSG;
+var name= process.env.USER_NAME;
+var user_password= process.env.USER_PASSWORD;
 
 app.get('/', (req, res) => {
-    var msg;
-    var app_msg = process.env.APP_MSG;
-    var name= process.env.USER_NAME;
-    var user_password= process.env.USER_PASSWORD;
     if (app_msg == undefined) {
         msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nYou have no message for me.\n';
     } else {
