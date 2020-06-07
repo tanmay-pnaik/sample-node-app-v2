@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     if (!app_msg) {
         msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\n';
     }
-    msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg;
+    msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg + '\n';
     res.send(msg);
 })
 
