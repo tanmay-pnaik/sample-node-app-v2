@@ -3,11 +3,12 @@ const app = express()
 const port = 8080
 
 app.get('/', (req, res) => {
-    var msg, APP_MSG;
-    if (APP_MSG == "") {
+    var msg;
+    var app_msg = process.env.APP_MSG;
+    if (app_msg == "") {
         msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nYou have no message for me.\n';
     } else {
-        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + APP_MSG + '\n';
+        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg + '\n';
     }
     res.send(msg);
 })
