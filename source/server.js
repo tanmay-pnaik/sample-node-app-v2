@@ -2,7 +2,13 @@ const express = require('express')
 const app = express()
 const port = 8080
 
-app.get('/', (req, res) => res.send('Hello, ' + req.hostname + '. Time is ' + Date() + '.\n' ))
+app.get('/', (req, res) => {
+    var msg;
+    if (!app_msg) {
+        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\n';
+    }
+    msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg;
+    res.send(msg);
+})
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
-
