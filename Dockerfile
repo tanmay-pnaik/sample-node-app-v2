@@ -1,5 +1,5 @@
 FROM node:current-alpine
-ENV USER_ID=1000290000
+ENV USER_ID=1000520000
 USER root
 RUN mkdir -p /tmp/prd-temp-files && chown -R ${USER_ID}:0 /tmp/prd-temp-files
 WORKDIR /usr/src/app
