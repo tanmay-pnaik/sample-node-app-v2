@@ -19,3 +19,25 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => console.log(`Sample node app listening at port ${port}`))
+
+// Sample code for SonarQube
+let corsOptions = {
+  origin: '*' // Sensitive
+};
+
+function foo() {
+  console.log("Hello, World!");
+}
+
+a = foo();
+
+var x = ["Saab", "Volvo", "BMW"];
+var y = x.reverse(); // Noncompliant
+var z = y.sort(); // Noncompliant
+
+var m = 8;
+var n = "8";
+
+if (m === n) {  // Noncompliant; always false
+  // ...
+}
