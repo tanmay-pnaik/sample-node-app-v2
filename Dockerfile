@@ -1,5 +1,5 @@
 FROM node:current-alpine
-ENV USER_ID=1000520000
+ENV USER_ID=1001
 USER root
 WORKDIR /usr/src/app
 COPY source/package*.json ./
