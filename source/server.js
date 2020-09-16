@@ -8,7 +8,7 @@ var user_password= process.env.USER_PASSWORD;
 
 app.get('/', (req, res) => {
     if (app_msg == undefined) {
-        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nYou have no message for me. v2.\n';
+        msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nYou have no message for me. v3.\n';
     } else {
         msg = 'Hello, ' + req.hostname + '. Time is ' + Date() + '.\nI will deliver your message: ' + app_msg + '\n';
     }
