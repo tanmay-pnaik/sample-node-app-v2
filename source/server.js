@@ -27,7 +27,7 @@ let corsOptions = {
 
 function foo() {
   console.log("Hello, World!");
-  console.log("Hello, Master!");
+  console.log("Hello, Devs!");
 }
 
 a = foo();
